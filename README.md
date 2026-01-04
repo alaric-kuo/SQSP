@@ -20,7 +20,7 @@
 
 SQSP 避開了將結構離散化的傳統硬解路徑，直接將建築拓樸映射到量子位元（Qubits）上：
 
-* **Physical Mapping**：將各樓層間的剛度與質量定義為 **Hamiltonian 算符 ()**。
+* **Physical Mapping**：將各樓層間的剛度與質量定義為 **Hamiltonian 算符 ($\hat{H}$)**。
 * **Unitary Evolution**：使用時變薛丁格方程式，觀測地震動能在結構經絡中的傳遞與反射。
 
 $$
