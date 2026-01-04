@@ -23,6 +23,9 @@ SQSP 避開了將結構離散化的傳統硬解路徑，直接將建築拓樸映
 * **Physical Mapping**：將各樓層間的剛度與質量定義為 **Hamiltonian 算符 ()**。
 * **Unitary Evolution**：使用時變薛丁格方程式，觀測地震動能在結構經絡中的傳遞與反射。
 
+$$
+i\hbar \frac{\partial}{\partial t} \Psi(x, t) = \hat{H} \Psi(x, t)
+$$
 
 * **Holographic Vision**：透過觀測量子態的演化，專家能像使用「紅外線顯像儀」一樣，直觀地判別能量是在樓層間順暢接力，還是發生了異常的淤滯與反射。
 
@@ -71,13 +74,6 @@ python SQS_MVP_Stable.py
 
 本專案由 **A&J Management Consulting (瀚菱管理顧問)** 開發維護。我們致力於將量子計算應用於數位韌性、信任系統設計與永續建築管理。
 
-* **Project Lead**: Alaric Kuo
+* **Project Lead**: Dr. Alaric Kuo
 * **Website**: [aj-consulting.net](https://aj-consulting.net)
 * **Related Project**: [The Topology of Hope](https://github.com/alaric-kuo/The-Topology-of-Hope)
-
----
-
-### 操作小秘訣：
-
-1. **檔案放置**：將你的 `SQS_MVP_Stable.py` 放在根目錄或 `src/` 下。
-2. **圖片展示**：強烈建議把你跑出來的那張「Case A vs Case B」的對照圖存在 `docs/` 資料夾，並在 README 中展示。這張圖能讓專家瞬間明白「能量反射」的物理意義。
