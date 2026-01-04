@@ -52,7 +52,7 @@ _, data_impedance = run_sqsp_simulation(is_damaged=True)
 # --- [3] 語意邏輯診斷引擎 (SQSP Semantic Engine) ---
 def get_semantic_report(name, history):
     """
-    將數值演化轉譯為診斷語意，為專家提供直覺判斷支援
+    將數值演化轉譯為診斷語意，並顯化關鍵能流數據 (0.97 / 0.65)
     """
     peak_roof = max(history['Floor 3'])
     
@@ -67,7 +67,8 @@ def get_semantic_report(name, history):
         status = "【Critical 臨界/失效】"
         desc = "頂端能量感知極低，結構生命線發生斷裂，需立即執行搶修決策。"
     
-    return f"{name} >> 狀態：{status} | 描述：{desc}"
+    # 在回報中顯化具體數值，對標「紅外線眼鏡」的診斷邏輯
+    return f"{name} >> 狀態：{status} (能流效率: {peak_roof:.2f}) | 描述：{desc}"
 
 # --- [4] 視覺化繪圖：量子紅外線眼鏡視覺輸出 ---
 plt.style.use('seaborn-v0_8-muted')
@@ -93,11 +94,11 @@ ax2.grid(True, alpha=0.3)
 plt.tight_layout()
 plt.show()
 
-# --- [5] 輸出 SQSP 診斷報告 (提供專家與決策者共識) ---
-print("="*75)
+# --- [5] 輸出 SQSP 診斷報告 (顯化 0.97 與 0.65) ---
+print("="*85)
 print("  Semantic Quantum Structural Protocol (SQSP) 診斷報告  ")
-print("="*75)
+print("="*85)
 print(get_semantic_report("健康監測模組", data_nominal))
 print(get_semantic_report("異變監測模組", data_impedance))
-print("="*75)
-print("註：本報告作為專家既有裝備之輔助增強，旨在提供直覺式能量透視。")
+print("="*85)
+print("註：本報告作為專家既有裝備之輔助增強。數值反映了結構在量子全像模擬下的生機能量傳遞率。")
