@@ -64,6 +64,7 @@ python SQS_MVP_Stable.py
 
 在門被破開的那一刻，我們希望看見的是平安，是那隻貓從全像光影中優雅地走出來。
 
+![SQSP Case Comparison](docs/Figure_1.png)
 ---
 
 ## 🤝 聯絡與諮詢 (Contact)
