@@ -20,15 +20,28 @@
 
 SQSP 避開了將結構離散化的傳統硬解路徑，直接將建築拓樸映射到量子位元（Qubits）上：
 
-* **Physical Mapping**：將各樓層間的剛度與質量定義為 **Hamiltonian 算符 ($\hat{H}$)**。
-* **Unitary Evolution**：使用時變薛丁格方程式，觀測地震動能在結構經絡中的傳遞與反射。
+1.物理層：哈密頓系統的同構映射 (Hamiltonian Isomorphism)
+
+SQSP 並非單純的數值模擬，而是將建築結構的剛度矩陣（Stiffness Matrix）與阻尼特性映射至量子位元的交互作用哈密頓量($\hat{H}$)（Hamiltonian Operators）中。
+* 技術實踐：利用 緊束縛模型 (Tight-Binding Model) 的變體，將樓層間的能量傳導路徑編碼為 Pauli 算符的線性組合（如 $XX$ 與 $YY$ 交互作用）。
+* 學術定位：這屬於量子動力學模擬 (Quantum Dynamics Simulation) 領域，探討的是連續時間演化門（PauliEvolutionGate）在非耗散系統中的能量保真度。
+
+2.架構層：物理告知的量子數位雙生 (Physics-Informed QDT)
+
+在數位雙生（Digital Twin）的框架下，SQSP 提供了「無離散時間」的結構響應解法。
+* 技術實踐：透過薛丁格方程式，直接觀測系統波函數的演化，跳過了傳統有限元素法（FEM）中繁瑣的時間步長迭代。
 
 $$
 i\hbar \frac{\partial}{\partial t} \Psi(x, t) = \hat{H} \Psi(x, t)
 $$
 
-* **Holographic Vision**：透過觀測量子態的演化，專家能像使用「紅外線顯像儀」一樣，直觀地判別能量是在樓層間順暢接力，還是發生了異常的淤滯與反射。
+* 學術定位：這定位於 量子計算輔助工程 (Quantum-CAE)，旨在利用量子優勢處理高自由度結構系統的實時共振分析。
+  
+3.語意層：基於能流保真度的診斷引擎 (Semantic Diagnostic Engine)
 
+SQSP 的最大創新在於引入了「語意邏輯層」，將量子態的機率幅演化轉譯為人類專家可理解的決策指標。
+* 數據指標：提出 能流效率指標 (Energy Flux Efficiency, EFE)。在模擬中，健康的結構展現出高度的相干性（EFE ≈ 0.97），而受損結構則因能量反射導致指標下降（EFE ≈ 0.65）。
+* 學術定位：這屬於 語意通信 (Semantic Communication) 與 信任系統設計 (Trust System Design) 的交界，強調技術輸出必須具備直覺的決策溫度與專家共識基礎。
 ---
 
 ## 🚦 診斷語意層 (Semantic Logic Layer)
